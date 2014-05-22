@@ -1,0 +1,54 @@
+###
+ # MD5Backup
+ # Copyright (C) 2013 Caio Cogliatti Jabulka (Jabulba) <http://www.jabulba.com>
+ # 
+ # This file is part of MD5Backup.
+ # 
+ # MD5Backup is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ # 
+ # MD5Backup is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ # 
+ # You should have received a copy of the GNU General Public License
+ # along with MD5Backup.  If not, see <http://www.gnu.org/licenses/>.
+ ##
+
+version: 0.0.1
+
+#Database configuration
+#Database file path with root at plugins/MD5Backup
+Database File: Backup.db
+
+# Directory to store the backups in relation to the server's work directory.
+BackupFolder: Backup
+
+# Excluded files and folders relative to server working dir. WINDOWS USERS USE / INSTEAD OF \ OR \\
+# examples considering the server is running C:\Server\MC
+# server.log would refer to -> C:\Server\MC\server.log
+# plugins\MD5Backup WOULD BE INVALID!
+# plugins/MD5Backup would refer to -> C:\Server\MC\plugins\MD5Backup
+Excluded Files:
+  - config/denLib.log.lck
+  - denLib.log
+  - denLib.log.lck
+  - denLib_obfData.log
+  - denLib_obfData.log.lck
+  - ForgeModLoader-server-0.log
+  - ForgeModLoader-server-0.log.lck
+  - ForgeModLoader-server-1.log
+  - ForgeModLoader-server-2.log
+  - LogisticsPipes-Request.log
+  - LogisticsPipes-Request.log.lck
+  - OreDict.log
+  - server.log
+  - server.log.lck
+
+#You can opt-out from metrics by setting the value to true. Metrics can help devs out! Disable only if you really need to!
+#Optionally you can globally opt-out from metrics by editing "plugins/PluginMetrics/config.yml" and changing opt-out to true.
+#You can check the information here: http://mcstats.org/plugin/MD5Backup
+metrics-opt-out: false

@@ -1,0 +1,38 @@
+###
+ # VGScoreboardPing
+ # Copyright (C) 2013 Caio Cogliatti Jabulka (Jabulba) <http://www.jabulba.com>
+ # 
+ # This file is part of VGScoreboardPing.
+ # VGScoreboardPing was originally a module of VG Server Manager(All Right Reserved until public release)
+ # 
+ # VGScoreboardPing is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ # 
+ # VGScoreboardPing is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ # 
+ # You should have received a copy of the GNU General Public License
+ # along with VGScoreboardPing.  If not, see <http://www.gnu.org/licenses/>.
+ ##
+name: MD5Backup
+main: com.jabulba.md5backup.MD5Backup
+version: ${project.version}
+author: Jabulba (Caio Jabulka)
+website: http://www.jabulba.com/
+description: Complete backup plugin.
+license: GPLv3 http://www.gnu.org/licenses/gpl.html
+github: https://github.com/Jabulba/VGScoreboardPing
+credits: Jabulba
+permissions:
+  md5backup.admin:
+    description: Allows the use of /md5backup
+    default: op
+commands:
+   bk:
+      description: MD5Backup commands
+      permission: md5backup.admin
+      permission-message: You don't have enougth permission.
